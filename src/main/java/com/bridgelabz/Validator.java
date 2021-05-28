@@ -30,4 +30,19 @@ public class Validator {
             return lastName();
         }
     }
+    public String emailId(){
+        System.out.println("Enter email id :");
+        String emailId = sc.nextLine();
+        boolean result = regexValidation.validateEmailId(emailId);
+        if(result) {
+            System.out.println("Email Address is valid");
+            return emailId;
+
+        }
+        else {
+            System.out.println("Email Address is not valid , Enter correct Email Adress");
+            return emailId();
+        }
+
+    }
 }
