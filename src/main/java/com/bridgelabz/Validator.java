@@ -37,15 +37,12 @@ public class Validator {
         if(result) {
             System.out.println("Email Address is valid");
             return emailId;
-
         }
         else {
             System.out.println("Email Address is not valid , Enter correct Email Adress");
             return emailId();
         }
-
     }
-
     public String mobileNumber() {
         System.out.println("Enter Mobile Number");
         String mobileNumber = sc.nextLine();
@@ -53,13 +50,11 @@ public class Validator {
         if(result) {
             System.out.println("Mobile Number is valid");
             return mobileNumber;
-
         }
         else {
             System.out.println("Mobile Number is not valid , Enter correct Phone N");
             return mobileNumber();
         }
-
     }
     public String password() {
         System.out.println("Enter password");
