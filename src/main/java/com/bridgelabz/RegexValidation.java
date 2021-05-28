@@ -20,6 +20,9 @@ public class RegexValidation {
     public boolean validatePassword(String password){
         return patternChecker(password, PASSWORD_PATTERRN);
     }
+    public boolean validateMobilNumber(String mobileNumber) {
+        return patternChecker(mobileNumber,MOBILE_NO_PATTERN);
+    }
     private static boolean patternChecker(String input, String fieldPattern){
         Pattern pattern = Pattern.compile(fieldPattern);
         Matcher matcher = pattern.matcher(input);
@@ -27,8 +30,4 @@ public class RegexValidation {
         return result;
     }
 
-
-    public boolean validateMobilNumber(String mobileNumber) {
-        return patternChecker(mobileNumber,MOBILE_NO_PATTERN);
-    }
 }
