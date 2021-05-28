@@ -61,4 +61,17 @@ public class Validator {
         }
 
     }
+    public String password() {
+        System.out.println("Enter password");
+        String password = sc.nextLine();
+        boolean r = regexValidation.validatePassword(password);
+        if(r) {
+            System.out.println("Password is valid");
+            return password;
+        }
+        else {
+            System.out.println("Password is not valid , Enter correct Password");
+            return password();
+        }
+    }
 }
