@@ -45,4 +45,20 @@ public class Validator {
         }
 
     }
+
+    public String mobileNumber() {
+        System.out.println("Enter Mobile Number");
+        String mobileNumber = sc.nextLine();
+        boolean result = regexValidation.validateMobilNumber(mobileNumber);
+        if(result) {
+            System.out.println("Mobile Number is valid");
+            return mobileNumber;
+
+        }
+        else {
+            System.out.println("Mobile Number is not valid , Enter correct Phone N");
+            return mobileNumber();
+        }
+
+    }
 }
