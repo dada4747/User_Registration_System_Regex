@@ -69,4 +69,39 @@ public class Validator {
             return password();
         }
     }
+
+    public void choice() {
+        while (true) {
+            System.out.println("Enter option to check for Validation");
+            System.out.println("1. First Name");
+            System.out.println("2. Last Name");
+            System.out.println("3. Email");
+            System.out.println("4. Mobile Number");
+            System.out.println("5. Password");
+            System.out.println("0. Exit");
+
+            Scanner sc = new Scanner(System.in);
+            int option = sc.nextInt();
+
+            switch (option) {
+                case 1:
+                   firstName();
+                    break;
+                case 2:
+                    lastName();
+                    break;
+                case 3:
+                    emailId();
+                    break;
+                case 4:
+                    mobileNumber();
+                    break;
+                case 5:
+                    password();
+                    break;
+                case 0:
+                    return;
+            }
+        }
+    }
 }
